@@ -1,0 +1,269 @@
+3
+:root {
+  --bg: #090b13;
+  --bg-soft: #111625;
+  --card: rgba(19, 25, 42, 0.8);
+  --text: #f5f7ff;
+  --muted: #b7bfd6;
+  --accent: #9a7fff;
+  --accent-2: #52d1f5;
+  --line: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 10%, #2c2457 0%, transparent 28%),
+    radial-gradient(circle at 86% 8%, #14445b 0%, transparent 24%),
+    linear-gradient(180deg, #080911 0%, #0d1120 100%);
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(8, 11, 19, 0.72);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+}
+
+.nav a {
+  color: var(--muted);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  display: block;
+}
+
+.hero {
+  padding-top: 90px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: #dcdfff;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.9rem);
+  line-height: 1.06;
+  margin-bottom: 18px;
+}
+
+.hero-text > p {
+  max-width: 580px;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 26px rgba(108, 122, 255, 0.35);
+}
+
+.btn-light {
+  border-color: var(--line);
+}
+
+.hero-card,
+.memory-card,
+.stories-wrap,
+.friend-note {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 24px;
+}
+
+.hero-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 10px;
+}
+
+.hero-card p,
+.hero-card small {
+  color: var(--muted);
+}
+
+.hero-card p {
+  margin-bottom: 16px;
+}
+
+.hero-card small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.82rem;
+}
+
+.upload-form {
+  display: grid;
+  gap: 10px;
+}
+
+.upload-form input,
+.upload-form button {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(8, 11, 18, 0.8);
+  color: var(--text);
+  padding: 12px 14px;
+  font: inherit;
+}
+
+.upload-form button {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.upload-form button:hover {
+  background: rgba(28, 36, 57, 0.95);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.memory-card {
+  padding: 14px;
+}
+
+.photo-btn {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.photo-btn img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.photo-btn:hover img {
+  transform: scale(1.03);
+}
+
+.memory-card h3 {
+  margin-bottom: 8px;
+}
+
+.memory-card p {
+  color:

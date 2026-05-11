@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Теплые Моменты | Фото для друзей</title>
+  <meta name="description" content="Личный сайт с памятными фотографиями и историями для друзей." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap&quot; rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="logo">Теплые Моменты</a>
+      <nav class="nav" id="nav">
+        <a href="#gallery">Галерея</a>
+        <a href="#stories">Истории</a>
+        <a href="#friends">Для друзей</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <p class="badge">Личная коллекция</p>
+          <h1>Сайт, где живут самые 
+дорогие воспоминания</h1>
+          <p>
+            Здесь собраны важные кадры: путешествия, праздники, встречи и маленькие моменты,
+            которые хочется сохранить и показать близким друзьям.
+          </p>
+          <div class="hero-actions">
+            <a href="#gallery" class="btn btn-primary">Смотреть фото</a>
+            <a href="#friends" class="btn btn-light">Поделиться с друзьями</a>
+          </div>
+        </div>
+        <article class="hero-card reveal">
+          <h3>Добавить фото</h3>
+          <p>Нажми на кнопку, чтобы выбрать файл и добавить новый памятный снимок в галерею.</p>
+          <form class="upload-form" id="uploadForm">
+            <input type="file" id="photoInput" accept="image/*" />
+            <button type="submit">Загрузить в галерею</button>
+          </form>
+          <small>Фото добавится только в текущую сессию браузера.</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <h2>Памятная галерея</h2>
+          <p>Открой любую карточку, чтобы посмотреть фото крупнее.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <article class="memory-card reveal">
+            <button class="photo-btn" type="button" data-src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80&quot; data-caption="Летний вечер на набережной">
+              <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80&quot; alt="Летний вечер на набережной" />
+            </button>
+            <h3>Летний вечер</h3>
+            <p>Тот самый закат, когда мы гуляли до ночи и смеялись без остановки.</p>
+          </article>
+          <article class="memory-card reveal">
+            <button class="photo-btn" type="button" data-src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80&quot; data-caption="Дружеская встреча после долгой разлуки">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80&quot; alt="Дружеская встреча после долгой разлуки" />
+            </button>
+            <h3>Долгожданная встреча</h3>
+            <p>Собрались вместе после долгого времени и будто не расставались.</p>
+          </article>
+          <article class="memory-card reveal">
+            <button class="photo-btn" type="button" data-src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80&quot; data-caption="Праздничный стол и теплый семейный вечер">
+              <img	src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=800&q=80&quot; alt="Праздничный стол и теплый семейный вечер" />
+            </button>
+            <h3>Праздничный день</h3>
+            <p>Дом, музыка, огни и атмосфера, которую хочется переживать снова.</p>
+          </article>
+          <article class="memory-card reveal">
+            <button class="photo-btn" type="button" data-src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80&quot; data-caption="Поездка за город и утро на природе">
+              <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80&quot; alt="Поездка за город и утро на природе" />
+            </button>
+            <h3>Поездка за город</h3>
+            <p>Свежий воздух, неспешный разговор и редкое спокойствие выходного дня.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stories">
+      <div class="container stories-wrap reveal">
+        <div>
+          <h2>Немного истории</h2>
+          <p>
+            Этот сайт создан как цифровой альбом: чтобы спустя годы открыть его и снова почувствовать
+            эмоции каждого дня. Можно дополнять галерею новыми кадрами и собирать хронику дружбы.
+          </p>
+        </div>
+        <ul>
+          <li><strong>2021</strong><span>первое большое путешествие</span></li>
+          <li><strong>2023</strong><span>общий праздник всей компанией</span></li>
+          <li><strong>2026</strong><span>запуск памятного сайта</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="friends">
+      <div class="container">
+        <div class="section-title">
+          <h2>Слова друзей</h2>
+          <p>Маленькая стена теплых сообщений от близких.</p>
+        </div>
+        <div class="friends-grid">
+          <blockquote class="friend-note reveal">
+            <p>"Спасибо за этот альбом. Смотрю фото и как будто снова рядом."</p>
+            <cite>Аня</cite>
+          </blockquote>
+          <blockquote class="friend-note reveal">
+            <p>"Каждый снимок как отдельная история. Очень душевно сделано."</p>
+            <cite>Илья</cite>
+          </blockquote>
+          <blockquote class="friend-note reveal">
+            <p>"Давай пополнять эту галерею после каждой встречи!"</p>
+            <cite>Маша</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-wrap">
+      <div>
+        <a href="#top" class="logo">Теплые Моменты</a>
+        <p>Личный фото-сайт с важными воспоминаниями и историями для друзей.</p>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <a href="mailto:memory@album.ru">memory@album.ru</a>
+      </div>
+      <div>
+        <h4>Поделиться</h4>
+        <a href="#">Telegram</a>
+        <a href="#">VK</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Закрыть просмотр">×</button>
+    <img id="lightboxImage" src="" alt="Увеличенная фотография" />
+    <p id="lightboxCaption"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
